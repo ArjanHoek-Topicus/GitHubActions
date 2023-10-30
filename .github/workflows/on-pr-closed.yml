@@ -1,0 +1,11 @@
+on:
+    pull_request:
+        types: [closed]
+
+name: On Pull Request Closed
+
+jobs:
+    reject-pending-deployments:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo 'on pr closed'
